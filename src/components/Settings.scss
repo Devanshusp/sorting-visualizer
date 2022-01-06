@@ -1,0 +1,104 @@
+@import "../assets/Styles.scss";
+
+.settings {
+  height: $settings-height;
+  padding: 0 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    @include buttons();
+  }
+
+  input[type="range"] {
+    @include sliders();
+  }
+
+  input[type="range"].speed {
+    direction: rtl;
+  }
+
+  select {
+    @include select();
+  }
+
+  label {
+    text-transform: uppercase;
+    margin-right: 5px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 15px;
+  }
+
+  .sliders {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 900px) {
+  .settings {
+    .sliders {
+      flex-direction: column;
+    }
+    .row {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .settings {
+    select {
+      padding: 5px;
+      width: 80px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .settings {
+    .buttons {
+      display: flex;
+      flex-direction: column;
+    }
+
+    button {
+      font-size: 10px;
+      padding: 5px 10px;
+    }
+
+    label {
+      font-size: 12px;
+    }
+
+    input[type="range"] {
+      width: 150px;
+    }
+
+    select {
+      font-size: 10px;
+      width: 60px;
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .settings {
+    overflow: scroll;
+    padding: 0 5px;
+
+    input[type="range"] {
+      width: 80px;
+    }
+  }
+}

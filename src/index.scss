@@ -1,0 +1,7 @@
+@import "/src/assets/Styles.scss";
+
+body {
+  margin: 0;
+  background-color: black;
+  @include poppins();
+}
