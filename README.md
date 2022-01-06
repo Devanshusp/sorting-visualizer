@@ -1,3 +1,3 @@
-1. style menu bar
-2. globalize styling (colors, fonts, buttons)
-3. add other algorithms
+# Sorting Visualizer
+
+Watch how sorting algorithms work while controling its speed and volume.
