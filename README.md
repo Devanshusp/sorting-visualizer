@@ -1,6 +1,6 @@
 # Sorting Visualizer
 
-![image](https://user-images.githubusercontent.com/66650721/148383730-923c8029-5a48-461d-8456-84250dd06717.png)
+![image](https://user-images.githubusercontent.com/66650721/148647927-099147ed-f761-4399-85d4-0f3e9f518d54.png)
 
 
 Watch how sorting algorithms work while controling their speed and volume.
