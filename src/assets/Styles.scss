@@ -10,7 +10,12 @@ $settings-height: 65px;
 
 $active-color: #3369ff;
 $light-color: #a9aebd;
-$disabled-color: #6a8dee;
+$disabled-color: #84a1f1;
+
+$start-color: #00da00;
+$start-disabled-color: #90ff90;
+
+$reset-color: red;
 
 // mixins
 @mixin buttons() {

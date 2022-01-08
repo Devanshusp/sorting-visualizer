@@ -5,8 +5,9 @@ function Settings(props) {
   const [countItems, setCountItems] = useState(props.arrCount);
   const [countSpeed, setCountSpeed] = useState(props.speed);
   const [sort, setSort] = useState(props.sortingAlgorithm);
+  const [arrType, setArrType] = useState(props.arrType);
 
-  const maxItems = 50;
+  let maxItems = 75;
   const maxSortSpeed = 1000;
 
   return (
@@ -19,7 +20,9 @@ function Settings(props) {
         >
           start
         </button>
-        <button onClick={props.resetSort}>reset</button>
+        <button className="reset" onClick={props.resetSort}>
+          reset
+        </button>
       </div>
       <div className="sliders">
         <div className="row">
@@ -34,7 +37,7 @@ function Settings(props) {
               props.setNewArrCount(e.target.value);
               props.setIsSorted(false);
             }}
-            disabled={props.isSorting}
+            disabled={props.isSorting || props.isSorted}
           />
         </div>
         <div className="row">
@@ -49,25 +52,37 @@ function Settings(props) {
               setCountSpeed(e.target.value);
               props.setSpeed(e.target.value);
             }}
-            disabled={props.isSorting}
+            disabled={props.isSorting || props.isSorted}
           />
         </div>
       </div>
-      <select
-        className="dropdown"
-        value={sort}
-        onChange={(e) => {
-          setSort(e.target.value);
-          props.setSortingAlgorithm(e.target.value);
-        }}
-        disabled={props.isSorting}
-      >
-        <option value="bubble">Bubble Sort</option>
-        <option value="selection">Selection Sort</option>
-        <option value="insertion">Insertion Sort</option>
-        <option value="quick">Quick Sort</option>
-        <option value="merge">Merge Sort</option>
-      </select>
+      <div className="dropdown">
+        <select
+          value={sort}
+          onChange={(e) => {
+            setSort(e.target.value);
+            props.setSortingAlgorithm(e.target.value);
+          }}
+          disabled={props.isSorting || props.isSorted}
+        >
+          <option value="bubble">Bubble Sort</option>
+          <option value="selection">Selection Sort</option>
+          <option value="insertion">Insertion Sort</option>
+          <option value="merge">Merge Sort</option>
+        </select>
+        <select
+          value={arrType}
+          onChange={(e) => {
+            setArrType(e.target.value);
+            props.setArrType(e.target.value);
+          }}
+          disabled={props.isSorting || props.isSorted}
+        >
+          <option value="random">Random</option>
+          <option value="reverse">Reverse</option>
+          <option value="nearly">Nearly</option>
+        </select>
+      </div>
     </div>
   );
 }

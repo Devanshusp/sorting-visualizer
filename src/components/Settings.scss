@@ -11,6 +11,15 @@
   button {
     @include buttons();
   }
+  .start {
+    background-color: $start-color;
+    &:disabled {
+      background-color: $start-disabled-color;
+    }
+  }
+  .reset {
+    background-color: $reset-color;
+  }
 
   input[type="range"] {
     @include sliders();
@@ -45,7 +54,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1010px) {
   .settings {
     .sliders {
       flex-direction: column;
@@ -56,16 +65,16 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   .settings {
     select {
       padding: 5px;
-      width: 80px;
+      width: 90px;
     }
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   .settings {
     .buttons {
       display: flex;
@@ -82,23 +91,45 @@
     }
 
     input[type="range"] {
-      width: 150px;
+      width: 140px;
     }
 
     select {
       font-size: 10px;
-      width: 60px;
+      width: 90px;
     }
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 500px) {
   .settings {
     overflow: scroll;
     padding: 0 5px;
 
     input[type="range"] {
-      width: 80px;
+      width: 90px;
+    }
+
+    .dropdown {
+      display: flex;
+      flex-direction: column;
+      select {
+        height: 21px;
+        width: 90px;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .settings {
+    input[type="range"] {
+      width: 70px;
+    }
+    .dropdown {
+      select {
+        width: 70px;
+      }
     }
   }
 }
