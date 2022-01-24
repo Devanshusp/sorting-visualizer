@@ -43,6 +43,13 @@ function App() {
     localStorage.setItem("array type", arrType);
   }, [arrCount, speed, sortingAlgorithm, arrType]);
 
+  const setVh = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  };
+  window.addEventListener("load", setVh);
+  window.addEventListener("resize", setVh);
+
   useEffect(() => {
     setArr(getArr());
   }, [arrType]);
