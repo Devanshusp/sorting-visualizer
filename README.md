@@ -4,4 +4,4 @@
 Watch how sorting algorithms work while controling their speed and volume.
 
 ## Try it out!
-Try it here: [Sorting Visualizer](https://devanshusp.github.io/sorting-visualizer/)
+Try it here: [`Sorting Visualizer`](https://devanshusp.github.io/sorting-visualizer/)
